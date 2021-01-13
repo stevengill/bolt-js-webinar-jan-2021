@@ -1,0 +1,14 @@
+{
+  "name": "bolt-js-webinar-jan-2021",
+  "version": "1.0.0",
+  "description": "Example app for webinar jan 2021 presentation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Steve Gill",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^2.3.0"
+  }
+}
