@@ -1,10 +1,10 @@
-# Frontiers 2020 Developer Tools Demo App
+# Jan 2021 Webinar Bolt-js Demo App
 
 This is a quick example app showing off some of the functionality available in bolt-js. 
 
 Local development requires a public URL where Slack can send requests. In this guide, we'll be using [`ngrok`](https://ngrok.com/download). Checkout [this guide](https://api.slack.com/tutorials/tunneling-with-ngrok) for setting it up.
 
-Before we get started, make sure you have a development workspace where you have permissions to install apps. If you don’t have one setup, go ahead and [create one](https://slack.com/create). You also need to [create a new app](https://api.slack.com/apps?new_app=1) if you haven’t already.
+Before we get started, make sure you have an Enterprise Grid sandbox to deploy and test your application. You can submit the [sandbox request form](https://api.slack.com/go/sandbox) to be provisioned two sandboxes. You also need to [create a new app](https://api.slack.com/apps?new_app=1) if you haven’t already in one of the sandbox workspaces.
 
 ## Install Dependencies
 
@@ -14,7 +14,7 @@ npm install
 
 ## Install app to workspace
 
-In your [**App Config** Page](https://api.slack.com/apps), go to **OAuth & Permissions** and add the `channels:read`, `app_mentions:read`, `commands` and `chat:write` permissions. Click **install App** to install the app to your workspace and generate a bot token.
+In your [**App Configuration**](https://api.slack.com/apps), go to **OAuth & Permissions** and add the `channels:history`, `app_mentions:read`, `commands` and `chat:write` permissions. Click **install App** to install the app to your workspace and generate a bot token.
 
 ## Setup Environment Variables
 
@@ -47,7 +47,7 @@ This should output a forwarding address for `http` and `https`. Take note of the
 Forwarding   https://3cb89939.ngrok.io -> http://localhost:3000
 ```
 
-Navigate to the **App Home** page in your app config and enable it. Then navigate to **Event Subscriptions** to enable it. The request URL should be set to your `ngrok` forwarding address with the `slack/events` path appended. Use the same url to enable **Interactivity and Shortcuts**. example url:
+Navigate to the **App Home** page in your **App Configuration** and enable it. Then navigate to **Event Subscriptions** to enable it. The request URL should be set to your `ngrok` forwarding address with the `slack/events` path appended. Use the same url to enable **Interactivity and Shortcuts**. example url:
 
 ```
 https://3cb89939.ngrok.io/slack/events
